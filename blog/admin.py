@@ -3,4 +3,4 @@ from .models import Post
 
 # Register your models here.
 # Adds Post model to admin panel to allow moderation
-admin.sites.register(Post)
+admin.site.register(Post)
