@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import Post
+from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
-# Adds Post model to admin panel to allow moderation
-admin.site.register(Post)
+
+# Adds decorator to register Post model & PostAdmin class to site
+@admin.register(Post)
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content')
