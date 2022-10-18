@@ -27,7 +27,7 @@ class PostDetail(View):
         comments = post.comments.filter(approved=True).order_by('created_on')
         # Check if user has liked the post
         liked = False
-        if post.likes.filter(id=self.request.user.id).exist():
+        if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         # Return all information with the 'render' method
