@@ -17,7 +17,7 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-class PostDetail(view):
+class PostDetail(View):
     # *args = other arguments, *kwargs = other key arguments
     def get(self, request, slug, *args, **kwargs):
         # Filter posts to only have active ones:
