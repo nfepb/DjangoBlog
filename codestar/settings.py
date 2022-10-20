@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-from django.contrib.messages import constants
+from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
 
@@ -65,11 +65,11 @@ LOGOUT_REDIRECT_URL = '/'
 
 # Messages have a built-in tag to indicate category
 MESSAGE_TAGS = {
-    messages.debug: 'alert-info',
-    messages.info: 'alert-info',
-    messages.success: 'alert-success',
-    messages.warning: 'alert-warning',
-    messages.error: 'alert-danger',
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
 }
 
 # Use bootstrap 4 for formatting because no bootstrap5 available
