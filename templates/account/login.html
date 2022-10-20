@@ -1,5 +1,7 @@
-{% extends "base.html" %} {% load i18n %} {% load account socialaccount %} {%
-block head_title %}{% trans "Sign In" %}{% endblock %} {% block content %}
+<!-- prettier-ignore -->
+{% extends "base.html" %} {% load i18n %} {% load account socialaccount %}
+<!-- prettier-ignore -->
+{% block head_title %} {% trans "Sign In" %} {% endblock %} {% block content %}
 
 <div class="container">
   <div class="row">
@@ -9,8 +11,8 @@ block head_title %}{% trans "Sign In" %}{% endblock %} {% block content %}
       <p>
         {% blocktrans %}Welcome back to the code|star blog. To leave a comment
         or like a post, please log in. If you have not created an account yet,
-        then <a class="link" href="{{ signup_url }}">sign up</a> first.{%
-        endblocktrans %}
+        then <a class="link" href="{{ signup_url }}">sign up</a>
+        first.{% endblocktrans %}
       </p>
     </div>
   </div>
