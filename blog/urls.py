@@ -10,4 +10,5 @@ urlpatterns = [
     # This is how they are linked
     #  1st slug is a path converter, 2nd is keyword name. 2nd could be anything
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    path('like/<slug:slug>', views.PostLike.as_view(), name='post_like')
 ]
