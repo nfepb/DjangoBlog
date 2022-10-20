@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from django.contrib.messages import constants
 if os.path.isfile('env.py'):
     import env
 
@@ -61,6 +62,15 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+# Messages have a built-in tag to indicate category
+MESSAGE_TAGS = {
+    messages.debug: 'alert-info',
+    messages.info: 'alert-info',
+    messages.success: 'alert-success',
+    messages.warning: 'alert-warning',
+    messages.error: 'alert-danger',
+}
 
 # Use bootstrap 4 for formatting because no bootstrap5 available
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
