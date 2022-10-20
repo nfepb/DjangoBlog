@@ -96,8 +96,9 @@
       <div class="card-body">
         <!-- For later -->
         {% if commented %}
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success alert-dismissible fade show" id="msg" role="alert">
           Your comment is awaiting approval
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="alert"></button>
         </div>
         {% else %}
         {% if user.is_authenticated %}
