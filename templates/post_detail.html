@@ -50,8 +50,8 @@
               {% else %}
               <span class="text-secundary"><i class="far fa-heart"></i></span>
               {% endif %}
+              <span class="text-secundary">{{ post.number_of_likes }}</span>
             </strong>
-            <span class="text-secundary"><i class="far fa-heart"></i> {{ post.number_of_likes }}</span>
           </div>
           <div class="col-1">
             {% with comments.count as total_comments %}
