@@ -85,6 +85,15 @@
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>
     </footer>
+    <!-- Script to TimeOut alert messages appearing -->
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById("msg");
+            // Assign new Bootstrap alert to alert + pass ID
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 3000);
+    </script>
 </body>
 
 </html>
